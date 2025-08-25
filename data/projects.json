@@ -1,0 +1,52 @@
+[
+  {
+    "title": "School Management System (Ruebens-man-sys)",
+    "description": "A web-based system for school operations with MPESA payment integration. Features: user authentication, payment processing, database optimization.",
+    "tech": [
+      "Python",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "github": "https://github.com/Ramsey-Javan/Ruebens-man-sys",
+    "demo": "",
+    "screenshot": "images/mockups/project1.png"
+  },
+  {
+    "title": "Developers Mate",
+    "description": "AI agent for developers, automating code generation, testing, and debugging for large projects. Includes NLP, bug detection, scalable architecture.",
+    "tech": [
+      "Python",
+      "NLP"
+    ],
+    "github": "https://github.com/Ramsey-Javan/Developers_Mate",
+    "demo": "",
+    "screenshot": "images/mockups/project2.png"
+  },
+  {
+    "title": "e-Masomo Revamp",
+    "description": "Renovated Moodle-based LMS for The Cooperative University of Kenya with Chipukizi Hive. Improved navigation, file handling, security, uptime. Led DevOps with AWS deployments, Docker, backups, Behat testing.",
+    "tech": [
+      "Moodle",
+      "AWS",
+      "Docker",
+      "Behat",
+      "CI/CD"
+    ],
+    "github": "https://github.com/chipukizi-hive/Emasomo-revamp",
+    "demo": "",
+    "screenshot": "images/mockups/project3.png"
+  },
+  {
+    "title": "Lux Shop",
+    "description": "Responsive website for a friend's jewelry and art shop. Product showcase, contact form, responsive design.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "Python"
+    ],
+    "github": "https://github.com/Ramsey-Javan/lux-shop",
+    "demo": "",
+    "screenshot": "images/mockups/project4.png"
+  }
+]
