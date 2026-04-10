@@ -42,19 +42,23 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Floating Sidebar Navigation -->
-  <nav id="sidebar" aria-label="Primary">
-    <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme"><i class="fa-solid fa-moon"></i></button>
-    <ul role="list">
-      <li><a href="#hero" class="nav-link" aria-label="Go to Hero"><i class="fa-solid fa-house"></i></a></li>
-      <li><a href="#skills" class="nav-link" aria-label="Go to Skills"><i class="fa-solid fa-code"></i></a></li>
-      <li><a href="#projects" class="nav-link" aria-label="Go to Projects"><i class="fa-solid fa-layer-group"></i></a></li>
-      <li><a href="#expedu" class="nav-link" aria-label="Go to Experience & Education"><i class="fa-solid fa-briefcase"></i></a></li>
-      <li><a href="#testimonials" class="nav-link" aria-label="Go to Testimonials"><i class="fa-solid fa-comments"></i></a></li>
-      <li><a href="#blog" class="nav-link" aria-label="Go to Blog"><i class="fa-solid fa-blog"></i></a></li>
-      <li><a href="#contact" class="nav-link" aria-label="Go to Contact"><i class="fa-solid fa-envelope"></i></a></li>
-    </ul>
-  </nav>
+  <header>
+    <!-- Floating Sidebar Navigation -->
+    <nav id="sidebar" aria-label="Primary">
+      <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <ul role="list">
+        <li data-label="Home"><a href="#hero" class="nav-link" aria-label="Go to Hero"><i class="fa-solid fa-house"></i></a></li>
+        <li data-label="Skills"><a href="#skills" class="nav-link" aria-label="Go to Skills"><i class="fa-solid fa-code"></i></a></li>
+        <li data-label="Projects"><a href="#projects" class="nav-link" aria-label="Go to Projects"><i class="fa-solid fa-layer-group"></i></a></li>
+        <li data-label="Experience"><a href="#expedu" class="nav-link" aria-label="Go to Experience & Education"><i class="fa-solid fa-briefcase"></i></a></li>
+        <li data-label="Testimonials"><a href="#testimonials" class="nav-link" aria-label="Go to Testimonials"><i class="fa-solid fa-comments"></i></a></li>
+        <li data-label="Blog"><a href="#blog" class="nav-link" aria-label="Go to Blog"><i class="fa-solid fa-blog"></i></a></li>
+        <li data-label="Contact"><a href="#contact" class="nav-link" aria-label="Go to Contact"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Particle Canvas -->
   <div id="particles"></div>
@@ -122,6 +126,18 @@
           <p>Second semester starting <strong>September 2025</strong>. Coursework: Data Structures, Algorithms, Web Development.</p>
           <a class="cta small" href="resume.pdf" target="_blank" rel="noopener">View Resume (PDF)</a>
         </article>
+
+        <article class="card">
+          <h3>NIRU Hackathon — Cerberus Team</h3>
+          <p><em>Nairobi, Kenya (2025)</em></p>
+          <ul>
+            <li>Built full backend, ML models, and cloud deployment for a deception-first AI cyber defense platform.</li>
+            <li>Trained Isolation Forest, Random Forest & LinearSVC models for real-time threat detection.</li>
+            <li>Deployed live on Render with FastAPI, WebSockets, and Fernet AES-256 encryption.</li>
+          </ul>
+          <a class="cta small ghost" href="https://cerberus-defense-suite-1.onrender.com/dashboard" target="_blank" rel="noopener">Live Dashboard</a>
+        </article>
+
         <article class="card">
           <h3>Head of DevOps & Infrastructure — Chipukizi Hive</h3>
           <p><em>e-Masomo Revamp (2025)</em></p>
@@ -130,6 +146,7 @@
             <li>Backups and Behat testing. Improved uptime and security posture.</li>
           </ul>
         </article>
+
         <article class="card">
           <h3>Freelance Developer</h3>
           <p><em>Lux Shop Website (2025)</em> — Built responsive storefront and contact workflows.</p>
@@ -198,7 +215,7 @@
 
   </main>
 
-  <!-- Inline Skills data (kept editable, can move to separate JSON later) -->
+  <!-- Skills data loaded from data/skills.json -->
   <script id="skills-data" type="application/json">
   {
     "Programming Languages": [
@@ -209,22 +226,46 @@
       {"name":"CSS","icon":"fa-brands fa-css3-alt","level":90}
     ],
     "Tools/Frameworks": [
+      {"name":"FastAPI","icon":"fa-solid fa-bolt","level":85},
       {"name":"Docker","icon":"fa-brands fa-docker","level":80},
       {"name":"Docker Compose","icon":"fa-brands fa-docker","level":80},
+      {"name":"WebSockets","icon":"fa-solid fa-plug","level":75},
       {"name":"AWS","icon":"fa-brands fa-aws","level":75},
       {"name":"Railway","icon":"fa-solid fa-train","level":70},
       {"name":"DigitalOcean","icon":"fa-solid fa-droplet","level":70},
       {"name":"React/Next.js","icon":"fa-brands fa-react","level":50}
     ],
+    "AI / ML": [
+      {"name":"scikit-learn","icon":"fa-solid fa-brain","level":80},
+      {"name":"NLP","icon":"fa-solid fa-comments","level":75},
+      {"name":"Model Training","icon":"fa-solid fa-chart-line","level":78},
+      {"name":"Isolation Forest","icon":"fa-solid fa-shield-halved","level":72}
+    ],
     "Other": [
       {"name":"Linux","icon":"fa-brands fa-linux","level":85},
       {"name":"Firewalls","icon":"fa-solid fa-shield-halved","level":80},
-      {"name":"DevOps","icon":"fa-solid fa-sitemap","level":75}
+      {"name":"DevOps","icon":"fa-solid fa-sitemap","level":75},
+      {"name":"CI/CD","icon":"fa-solid fa-gears","level":75}
     ]
   }
   </script>
 
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/projects.react.js" defer></script>
+
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#sidebar a.nav-link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+  </script>
 </body>
 </html>

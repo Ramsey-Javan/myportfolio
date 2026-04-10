@@ -1,0 +1,31 @@
+{
+  "Programming Languages": [
+    {"name":"Python","icon":"fa-brands fa-python","level":90},
+    {"name":"C","icon":"fa-solid fa-c","level":85},
+    {"name":"C++","icon":"fa-solid fa-code","level":85},
+    {"name":"HTML","icon":"fa-brands fa-html5","level":95},
+    {"name":"CSS","icon":"fa-brands fa-css3-alt","level":90}
+  ],
+  "Tools/Frameworks": [
+    {"name":"FastAPI","icon":"fa-solid fa-bolt","level":85},
+    {"name":"Docker","icon":"fa-brands fa-docker","level":80},
+    {"name":"Docker Compose","icon":"fa-brands fa-docker","level":80},
+    {"name":"WebSockets","icon":"fa-solid fa-plug","level":75},
+    {"name":"AWS","icon":"fa-brands fa-aws","level":75},
+    {"name":"Railway","icon":"fa-solid fa-train","level":70},
+    {"name":"DigitalOcean","icon":"fa-solid fa-droplet","level":70},
+    {"name":"React/Next.js","icon":"fa-brands fa-react","level":50}
+  ],
+  "AI / ML": [
+    {"name":"scikit-learn","icon":"fa-solid fa-brain","level":80},
+    {"name":"NLP","icon":"fa-solid fa-comments","level":75},
+    {"name":"Model Training","icon":"fa-solid fa-chart-line","level":78},
+    {"name":"Isolation Forest","icon":"fa-solid fa-shield-halved","level":72}
+  ],
+  "Other": [
+    {"name":"Linux","icon":"fa-brands fa-linux","level":85},
+    {"name":"Firewalls","icon":"fa-solid fa-shield-halved","level":80},
+    {"name":"DevOps","icon":"fa-solid fa-sitemap","level":75},
+    {"name":"CI/CD","icon":"fa-solid fa-gears","level":75}
+  ]
+}

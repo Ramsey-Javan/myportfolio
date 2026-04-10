@@ -9,7 +9,7 @@ A futuristic, cyberpunk-inspired portfolio website. Built with semantic HTML, CS
 - Accessibility: ARIA labels, keyboard-friendly focus styles, skip link, high-contrast colors.
 - SEO-ready: meta tags, Open Graph image, descriptive alt text.
 - Light/dark toggle stored in `localStorage`.
-- JSON-driven data: `data/projects.json` & `data/blog.json`.
+- JSON-driven data: `data/projects.json`, `data/blog.json`, & `data/skills.json`.
 - Minimal React usage via CDN for `ProjectsGrid`.
 - Google Analytics ready (replace `GA_MEASUREMENT_ID` in `index.html`).
 - Contact form wired for Formspree (replace `your_form_id`).
@@ -21,7 +21,7 @@ A futuristic, cyberpunk-inspired portfolio website. Built with semantic HTML, CS
 ├── assets
 │   ├── css/style.css
 │   └── js/{main.js, projects.react.js}
-├── data/{projects.json, blog.json}
+├── data/{projects.json, blog.json, skills.json}
 ├── images/mockups/{preview.png, avatar-holo.svg, neon-chip.svg, project*.png}
 └── resume.pdf (placeholder)
 ```
@@ -62,6 +62,7 @@ git push -u origin main
     "screenshot": "images/mockups/project1.png"
   }
   ```
+- **Skills**: edit `data/skills.json` to organize technical skills by category (Programming Languages, Tools/Frameworks, AI/ML, Other). Each skill includes name, Font Awesome icon, and proficiency level (0–100).
 - **Blog**: edit `data/blog.json` with `title`, `date`, and `excerpt`.
 
 ## 🤖 AI Chat Widget (Placeholder)
